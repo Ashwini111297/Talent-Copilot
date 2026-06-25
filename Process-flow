@@ -1,0 +1,404 @@
+# TalentCopilot – AI-Powered Recruiting Assistant
+
+## Overview
+
+TalentCopilot is an AI-powered recruiting platform designed to help Talent Acquisition teams automate sourcing, screening, and interview coordination.
+
+The platform acts as a virtual recruiting assistant that helps recruiters:
+
+- Source candidates
+- Parse and analyze resumes
+- Match candidates against Job Descriptions (JDs)
+- Generate recruiter notes and recommendations
+- Rank candidates based on fit
+- Schedule interviews
+
+The goal is to reduce manual effort, improve screening accuracy, and accelerate hiring.
+
+---
+
+# Problem Statement
+
+Recruiters spend a significant amount of time:
+
+- Sourcing candidates
+- Reviewing resumes
+- Comparing resumes against job requirements
+- Writing screening notes
+- Scheduling interviews
+
+These tasks are repetitive, time-consuming, and difficult to scale.
+
+TalentCopilot leverages AI to automate these workflows and enable recruiters to focus on engaging top talent and making better hiring decisions.
+
+---
+
+# Core Features
+
+## AI Resume Analysis
+
+Upload resumes in PDF or DOCX format.
+
+Extract:
+
+- Candidate Name
+- Experience
+- Skills
+- Education
+- Current Company
+- Notice Period
+
+Generate a structured candidate profile.
+
+---
+
+## JD Matching Engine
+
+Recruiters can upload a Job Description.
+
+The system automatically:
+
+- Compares resume against JD
+- Calculates Match Score
+- Identifies Matching Skills
+- Highlights Missing Skills
+- Evaluates Experience Fit
+- Generates Hiring Recommendations
+
+Example Output:
+
+```json
+{
+  "matchScore": 88,
+  "matchingSkills": ["React", "JavaScript", "AWS"],
+  "missingSkills": ["TypeScript"],
+  "recommendation": "Proceed to Interview"
+}
+```
+
+---
+
+## AI Recruiter Notes
+
+Generate recruiter-friendly summaries such as:
+
+```text
+Strong frontend engineer with 5 years of experience.
+
+Worked extensively with React and JavaScript.
+
+Lacks TypeScript exposure but demonstrates strong technical depth.
+
+Recommended for Technical Round.
+```
+
+---
+
+## Candidate Ranking
+
+Upload multiple resumes and rank candidates automatically.
+
+Example:
+
+```text
+#1 Rahul - 95%
+#2 Priya - 91%
+#3 Arjun - 89%
+```
+
+---
+
+## Candidate Search
+
+Search candidates using:
+
+- Skills
+- Experience
+- Location
+- Notice Period
+- Current Company
+
+Example:
+
+```text
+React Developer Bangalore 4+ Years
+```
+
+---
+
+## AI Sourcing Assistant (Future Enhancement)
+
+Act as a virtual sourcing recruiter.
+
+Example:
+
+```text
+Find Senior Backend Engineers in Bangalore
+```
+
+The AI:
+
+- Searches connected candidate databases
+- Identifies matching profiles
+- Scores candidates
+- Generates outreach messages
+
+---
+
+## Interview Scheduling (Future Enhancement)
+
+Integrate with:
+
+- Google Calendar
+- Outlook Calendar
+
+Automatically:
+
+- Check interviewer availability
+- Suggest interview slots
+- Send interview invitations
+
+---
+
+# System Architecture
+
+```text
+React Frontend
+       │
+       ▼
+Node.js Backend
+       │
+       ▼
+Resume Parser
+       │
+       ▼
+OpenAI API
+       │
+       ▼
+PostgreSQL Database
+```
+
+---
+
+# Development Roadmap
+
+## Stage 1: Resume Intelligence (MVP)
+
+### Goal
+
+Build a working AI Resume Screening Platform.
+
+### Features
+
+- Upload Job Description
+- Upload Resume
+- Resume Parsing
+- Candidate Profile Extraction
+- AI Match Score
+- AI Candidate Summary
+
+### Workflow
+
+```text
+Recruiter Uploads JD
+          │
+          ▼
+Recruiter Uploads Resume
+          │
+          ▼
+Resume Parsing
+          │
+          ▼
+AI Analysis
+          │
+          ▼
+Match Score + Recommendation
+```
+
+---
+
+## Stage 2: Candidate Intelligence
+
+### Features
+
+- Candidate Ranking
+- Candidate Search
+- Recruiter Dashboard
+- Candidate Database
+
+### Example
+
+```text
+Search:
+React Bangalore 4+ Years
+
+Results:
+Candidate A
+Candidate B
+Candidate C
+```
+
+---
+
+## Stage 3: AI Recruiting Agent
+
+### Features
+
+- AI Candidate Sourcing
+- Candidate Recommendations
+- Personalized Outreach Generation
+- Interview Scheduling
+
+Example:
+
+```text
+Find Backend Engineers
+```
+
+Output:
+
+```text
+1. Rahul - 94%
+2. Priya - 91%
+3. Arjun - 88%
+```
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- React.js
+- Tailwind CSS
+- React Router
+
+## Backend
+
+- Node.js
+- Express.js
+
+## Database
+
+- PostgreSQL
+
+## Authentication
+
+- JWT Authentication
+
+## File Upload
+
+- Multer
+
+## Resume Parsing
+
+- pdf-parse
+
+## AI
+
+- OpenAI API
+
+## Storage
+
+- AWS S3
+
+---
+
+# AI Tools & Services
+
+## OpenAI
+
+Used for:
+
+- Resume Analysis
+- JD Matching
+- Candidate Summaries
+- Recruiter Notes
+- Outreach Message Generation
+
+## LangChain
+
+Used for:
+
+- AI Workflow Orchestration
+- Multi-Step AI Pipelines
+- Agent Development
+
+## Vector Database
+
+Used for semantic candidate search.
+
+Options:
+
+- Pinecone
+- Weaviate
+- ChromaDB
+
+## OCR
+
+Used for scanned resumes.
+
+Options:
+
+- Tesseract OCR
+- Google Vision API
+
+## Resume Parsing APIs
+
+Options:
+
+- Affinda
+- RChilli
+
+## Scheduling Integrations
+
+- Google Calendar API
+- Microsoft Graph API
+
+---
+
+# Folder Structure
+
+```text
+talentcopilot/
+
+├── client/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+│
+├── server/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   ├── models/
+│   └── middleware/
+│
+├── uploads/
+├── database/
+└── README.md
+```
+
+---
+
+# Benefits
+
+- Reduce screening time by 70–80%
+- Improve shortlisting accuracy
+- Standardize candidate evaluation
+- Increase recruiter productivity
+- Improve hiring efficiency
+- Build a scalable recruiting workflow
+
+---
+
+# Future Vision
+
+TalentCopilot aims to become an AI-powered recruiting copilot that acts like a virtual recruiting intern, helping recruiters source, screen, rank, engage, and schedule candidates with minimal manual effort.
+
+---
+
+# One-Line Pitch
+
+**TalentCopilot is an AI-powered recruiting assistant that helps recruiters source, screen, and shortlist the best candidates faster through intelligent resume analysis and job matching.**
