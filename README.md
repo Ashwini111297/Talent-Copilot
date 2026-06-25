@@ -1,6 +1,6 @@
-# Talent-Copilot
+# TalentCopilot
 
-Project Title
+##Project Title
 
 TalentCopilot – AI-Powered Recruiting Assistant
 
